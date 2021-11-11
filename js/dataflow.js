@@ -11,6 +11,8 @@ const weatherToday = "rainy";
 
 if (weatherToday == "cloudy") {
     console.log('Perhaps bring a jacket');
+} else if (weatherToday == "cloudy") {
+
 } else {
     console.log('You\'ll be fine with a Tshirt');
 }
