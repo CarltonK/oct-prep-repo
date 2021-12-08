@@ -3,15 +3,31 @@
 // Listener
 // Function as a parameter/argument - Callback functions
 
-$(document).ready(function() {
-    $('h1').click(function() {
-        // Some event handlers take in parameters
-        // fadeOut, fadeIn, hide, show
-        // https://www.w3schools.com/jquery/jquery_fade.asp
-        $('img').animate({ right: '250px' }, 'slow');
-    })
+var globalVar;
 
-    $('img').click(function() {
-        alert('You clicked on an image')
+$(document).ready(function() {
+    // Tag name#id name
+    $('button#light').click(function() {
+        var buttonVariable;
+        $('body').css('background-color', 'white')
+    })
+    $('button#dark').click(function() {
+        // Add items to the top
+        $('body').css('background-color', 'grey')
+        $('ul#left').prepend('<li>Top</li>');
+        $('ul#right').prepend('<li>Not Top</li>');
+    })
+    $('button#add').click(function() {
+        $('ul#left').append('<li>New List Item added via JQuery</li>');
+        $('ul#right').append('<li>This is the opposite</li>');
+        // $('ul#left').children('li').first().click(function() {
+
+        // })
+    })
+    $('button#remove').click(function() {
+        $('ul#left').children('li').first().click(function() {
+            // this keyword
+            $(this).remove();
+        });
     })
 })
