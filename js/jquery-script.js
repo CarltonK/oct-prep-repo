@@ -20,9 +20,7 @@ $(document).ready(function() {
     $('button#add').click(function() {
         $('ul#left').append('<li>New List Item added via JQuery</li>');
         $('ul#right').append('<li>This is the opposite</li>');
-        // $('ul#left').children('li').first().click(function() {
 
-        // })
     })
     $('button#remove').click(function() {
         $('ul#left').children('li').first().click(function() {
